@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>英中对照 · 网页翻译</title>
+    <link rel="stylesheet" href="popup.css">
+    <script src="popup.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <span class="logo" aria-hidden="true">译</span>
+      <div><h1>英中对照</h1><p>读懂中文，保留英文。</p></div>
+      <span class="language">EN → 简中</span>
+    </header>
+    <main>
+      <section class="preview" aria-label="翻译效果示例">
+        <span class="eyebrow">在网页原位置 · 中文在上，英文在下</span>
+        <p class="chinese">让每一次阅读，都更轻松。</p>
+        <p class="english" lang="en">Make every reading experience easier.</p>
+      </section>
+      <div class="status" role="status" aria-live="polite">
+        <span id="status-dot" class="dot"></span>
+        <div><p id="status-title">正在连接当前网页…</p><p id="status-detail">英文 → 简体中文</p></div>
+      </div>
+      <p id="error" class="error" role="alert" hidden></p>
+      <button id="translate" class="primary" disabled>翻译此网页</button>
+      <button id="restore" class="secondary" disabled>恢复原文</button>
+      <label class="setting"><span>持续翻译新增内容<small>支持滚动加载、动态更新的网页</small></span><input id="dynamic" type="checkbox" checked></label>
+      <p class="hint">滚动时翻译后续段落。代码和输入框会自动跳过。</p>
+    </main>
+    <footer><span>Google 翻译 · 需要可访问的网络</span><kbd>Alt + Shift + T</kbd></footer>
+    <p class="privacy">点击翻译后，待翻译的英文会发送至 Google。</p>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bilingual Reader · Demo</title>
+  <style>
+    :root { font-family: Georgia, "Microsoft YaHei", serif; color: #233b35; background: #f5f3ed; }
+    body { max-width: 760px; margin: 70px auto; padding: 0 28px; line-height: 1.8; }
+    header { color: #738478; font: 12px system-ui; letter-spacing: 3px; border-bottom: 1px solid #d8dfd4; padding-bottom: 22px; }
+    h1 { font-size: 38px; line-height: 1.35; font-weight: 500; margin-top: 35px; }
+    h2 { margin-top: 35px; font-size: 24px; font-weight: 500; }
+    p, li { font-size: 18px; }
+    a { color: #247b61; }
+    code, pre { background: #e7eade; border-radius: 6px; padding: 4px; }
+    pre { padding: 16px; }
+    .instructions { font: 14px/1.8 system-ui; color: #66776a; background: #eaeee2; border-radius: 12px; padding: 18px; margin-bottom: 30px; }
+    button { background: #236c56; border: 0; color: white; font: 14px system-ui; padding: 12px 18px; border-radius: 7px; cursor: pointer; }
+    input { font: 15px system-ui; padding: 10px; border: 1px solid #b9c8b7; border-radius: 6px; }
+    footer { font: 13px system-ui; color: #8a9388; margin-top: 55px; }
+  </style>
+  <script src="demo.js" defer></script>
+</head>
+<body>
+  <div class="instructions" lang="zh-CN" translate="no">加载扩展后，点击工具栏中的“英中对照”，再点击“翻译此网页”。本页将显示中文在上、英文在下的对照效果。下方按钮可用于测试动态内容。</div>
+  <header>FIELD NOTES / A BETTER WAY TO READ</header>
+  <main>
+    <h1>Discover a world of ideas.</h1>
+    <p id="intro">Reading in another language opens the door to new perspectives. A good translation helps you understand the meaning while keeping the original words within reach.</p>
+    <p id="linked">Explore <a id="example-link" href="https://example.com/">this example</a> to see how links remain available in the original text.</p>
+    <h2>Small steps, lasting progress</h2>
+    <ul><li>Read something interesting every day.</li><li>Compare the translation with the original sentence.</li><li>Keep learning at your own pace.</li></ul>
+    <p>Technical examples stay untouched:</p>
+    <pre><code>const greeting = "Hello, world!";</code></pre>
+    <p lang="zh-CN">这段中文会保持原样，便于验证插件只处理英文内容。</p>
+    <p><input aria-label="Notes" placeholder="Write your notes here" value="This input should stay untouched."></p>
+    <div contenteditable="true" aria-label="Editable notes">This editable content should stay untouched.</div>
+    <p lang="fr">Bonjour, le monde. Ceci est un exemple en français.</p>
+    <p hidden>Hidden English text should never be translated.</p>
+    <div id="dynamic-content"></div>
+    <button id="add-content" type="button" translate="no">加载一段新英文</button>
+  </main>
+  <footer translate="no">英中对照 · 本地演示页</footer>
+</body>
+</html>
